@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
+                bat 'git config --system --add safe.directory C:/MAD/flutter'
                 bat 'flutter pub get'
             }
         }
